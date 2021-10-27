@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmos Photo</title>
+    <link rel="stylesheet" href="comInfo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+</head>
+
+<body>
+    <section>
+        <header>
+            <a href="#"><img src="pngwing.com (24).png" class="logo"></a>
+            <div class="toggle"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What is new</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><span class="themeswitch"></span></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>This Is Our Universe
+                    <BR>Its <span>Erat</span></h2>
+                <p>In its original understanding, the Greek term "space" (order, world order) had a philosophical basis, defining a hypothetical closed vacuum around the Earth - the center of the Universe. and its borrowings, the practical term "space" is
+                    used to the same semantics (since, from a scientific point of view, the vacuum enveloping the Earth is infinite)
+                </p>
+                <a href="#">See The Planets</a>
+            </div>
+            <div class="imgBox">
+                <img src="pngwing.com (26).png">
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+
+        </ul>
+    </section>
+    <script>
+        let themeswitch = document.querySelector('.themeswitch');
+        let body = document.querySelector('body');
+        themeswitch.onclick = function() {
+            themeswitch.classList.toggle('active');
+            body.classList.toggle('.dark');
+        }
+        let manutoggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        manutoggle.onclick = function() {
+            manutoggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

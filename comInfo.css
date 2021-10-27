@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mate SC', serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --black: #333;
+    --green: #017143;
+    --white: #fff;
+    --white2: #fff;
+    --black2: #333;
+}
+
+.dark {
+    --black: #fff;
+    --white: #113538;
+    --black2: #124e36;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--white)
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo {
+    position: relative;
+    max-width: 110px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    display: flex;
+    margin-left: 30px;
+}
+
+header ul li a {
+    display: inline-block;
+    color: var(--black);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.content .textBox {
+    position: relative;
+    min-height: 60px;
+    z-index: 2;
+    margin-right: 20px;
+}
+
+.content .textBox h2 {
+    font-size: 3em;
+    color: var(--black);
+    line-height: 1.4em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.content .textBox h2 span {
+    font-size: 1.2em;
+    color: var(--green);
+}
+
+.dark .content .textBox {
+    color: #333;
+}
+
+.content .textBox p {
+    color: var(--black);
+}
+
+.content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: var(--green);
+    color: var(--white2);
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.content .imgBox {
+    position: relative;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .imgBox::before {
+    content: ' ';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: var(--white);
+    border-radius: 50%;
+}
+
+.content .imgBox img {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    right: 120px;
+}
+
+.sci {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: inline-block;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    background: var(--black2);
+    color: var(--white2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sci li a .fab {
+    font-size: 1.2em;
+}
+
+.sci li a:hover {
+    background: var(--green);
+}
+
+.themeswitch {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: var(--black);
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.themeswitch::before {
+    content: '\f186';
+    font-family: fontAwesome;
+    color: var(--black);
+    font-size: 20px;
+}
+
+.themeswitch .active::before {
+    content: '\f185';
+}
+
+@media (max-width: 991px) {
+    section {
+        padding: 150px 20px;
+    }
+    header {
+        padding: 20px;
+    }
+    .sci {
+        bottom: 20px;
+        left: 20px;
+    }
+    .content {
+        flex-direction: column-reverse;
+    }
+    .content .textBox,
+    .content .imgBox {
+        max-width: 100%;
+        margin-right: 0px;
+    }
+    .content .imgBox img {
+        max-width: 250px;
+    }
+    .content .imgBox::before {
+        width: 125px;
+        height: 125px;
+        clip-path: circle(125px at center);
+    }
+    .navigation {
+        display: none;
+    }
+    .toggle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(pngwing.com\ \(12\).png);
+        filter: invert(1);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 10000;
+    }
+}
